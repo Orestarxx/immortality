@@ -17,10 +17,10 @@
         <a href="setanta.html"><img src='../pictures/Логотип_Сетанта_Спортс.png' alt="" id="logo"></a>
     </div>
     <div id="menuHolder">
-        <a href=""><h3 class="menu">Premier League</h3></a>
-        <a href=""><h3 class="menu">Bundesliga</h3></a>
-        <a href=""><h3 class="menu">Laliga</h3></a>
-        <a href=""><h3 class="menu">Seria A</h3></a>
+        <a href=""><h3 class="menu" id="premier">Premier League</h3></a>
+        <a href=""><h3 class="menu" id="bundesliga">Bundesliga</h3></a>
+        <a href=""><h3 class="menu" id="laLiga">Laliga</h3></a>
+        <a href=""><h3 class="menu" id="seriaA">Seria A</h3></a>
     </div>
     <div id="searchUserHolder">
      <div class="iconHolder">
@@ -33,9 +33,16 @@
 
 </div>
     <div id="contentHolder">
+        <video autoplay muted loop id="myVideo">
 
+            <source src="../pictures/Nike%20Football%20The%20Last%20Game%20ft%20Ronaldo,%20Neymar%20Jr%20,%20Rooney,%20Zlatan,%20Iniesta%20&%20mo.mp4"
+                    type="video/mp4">
+        </video>
+        <div id="sponsors"></div>
     </div>
 </div>
-<script src="../premierLeague/premierLeague.js"></script>
+
+<script src="../controler/centantaControler.js"></script>
+<script src="./main.js"></script>
 </body>
 </html>
