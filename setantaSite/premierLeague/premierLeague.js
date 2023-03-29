@@ -1456,6 +1456,10 @@ for (const result of pLeagueInfo) {
         let card = document.createElement('div');
 card.classList.add('card');
 innerSlider.append(card)
+        let date = document.createElement('div');
+date.classList.add('date');
+date.innerHTML = `${result.fixture.date}`
+card.append(date)
 
 }
 
