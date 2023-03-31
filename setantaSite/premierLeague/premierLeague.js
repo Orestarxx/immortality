@@ -1468,15 +1468,59 @@ for (const result of pLeagueInfo) {
 
         let resultOfMatch = document.createElement('div');
         resultOfMatch.classList.add('result');
-
+//home result
         let homeResult = document.createElement('div');
         homeResult.classList.add('homeResult');
 
+        let nameOfTeam = document.createElement('div');
+        nameOfTeam.classList.add('team');
+        nameOfTeam.innerHTML = `<h3>${result.teams.home.name}</h3>`;
+
+        let logoOfTeam = document.createElement('img');
+        logoOfTeam.src = result.teams.home.logo;
+        logoOfTeam.classList.add('logoOfTeam');
+        nameOfTeam.append(logoOfTeam)
+
+        let countOfTeam = document.createElement('div');
+        countOfTeam.classList.add('countOfTeam');
+        if (result.score.fulltime.home === null) {
+                countOfTeam.innerHTML = `<h1></h1>`
+        } else {
+                countOfTeam.innerHTML = `<h1>${result.score.fulltime.home}</h1>`
+        }
+        homeResult.append(nameOfTeam,countOfTeam);
+
+        let twoPoints = document.createElement('div');
+        twoPoints.classList.add('twoPoints');
+        twoPoints.innerHTML = '<h2>:</h2>';
+
+
+//away result
         let awayResult = document.createElement('div');
         awayResult.classList.add('awayResult');
-        resultOfMatch.append(homeResult,awayResult);
+
+        let countOfTeamAway = document.createElement('div');
+        countOfTeamAway.classList.add('countOfTeam');
+        if (result.score.fulltime.home === null) {
+                countOfTeamAway.innerHTML = `<h1></h1>`
+        } else {
+                countOfTeamAway.innerHTML = `<h1>${result.score.fulltime.away}</h1>`
+        }
+
+        let logoOfTeamAway = document.createElement('img');
+        logoOfTeamAway.src = result.teams.away.logo;
+        logoOfTeamAway.classList.add('logoOfTeam');
 
 
+        let nameOfTeamAway = document.createElement('div');
+        nameOfTeamAway.classList.add('team');
+        nameOfTeamAway.innerHTML = `<h3>${result.teams.away.name}</h3>`;
+
+        nameOfTeamAway.append(logoOfTeamAway)
+
+        awayResult.append(countOfTeamAway,nameOfTeamAway)
+
+        resultOfMatch.append(homeResult,twoPoints, awayResult);
 
         card.append(status,stadium,resultOfMatch);
 }
