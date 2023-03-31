@@ -1451,8 +1451,19 @@ let pLeagueInfo = data.response;
 let sliderContainer = document.querySelector('.slider-container');
 let innerSlider = document.querySelector('.inner-slider');
 
+
+// fetch(`https://v3.football.api-sports.io/fixtures?league=39&season=2022`, {
+//     "method": "GET",
+//     "headers": {
+//         "x-rapidapi-host": "v3.football.api-sports.io",
+//         "x-rapidapi-key": key
+//     }
+//
+// })
+//     .then(response => response.json())
+//     .then(result => console.log(result))
 for (const result of pLeagueInfo) {
-        console.log(result);
+        console.log(result)
 
         let card = document.createElement('div');
         card.classList.add('card');
@@ -1488,7 +1499,6 @@ for (const result of pLeagueInfo) {
         } else {
                 countOfTeam.innerHTML = `<h1>${result.score.fulltime.home}</h1>`
         }
-        homeResult.append(nameOfTeam,countOfTeam);
 
         let twoPoints = document.createElement('div');
         twoPoints.classList.add('twoPoints');
@@ -1511,18 +1521,31 @@ for (const result of pLeagueInfo) {
         logoOfTeamAway.src = result.teams.away.logo;
         logoOfTeamAway.classList.add('logoOfTeam');
 
-
         let nameOfTeamAway = document.createElement('div');
-        nameOfTeamAway.classList.add('team');
         nameOfTeamAway.innerHTML = `<h3>${result.teams.away.name}</h3>`;
 
-        nameOfTeamAway.append(logoOfTeamAway)
+        let awayHolder = document.createElement('div');
+        awayHolder.classList.add('team')
+        awayHolder.append(logoOfTeamAway,nameOfTeamAway)
 
-        awayResult.append(countOfTeamAway,nameOfTeamAway)
+        let roundDiv = document.createElement('div');
+        roundDiv.classList.add('roundDiv');
+        roundDiv.innerHTML = result.league.round;
+
+        let logoDivHolder = document.createElement('div');
+        logoDivHolder.classList.add('logoDivHolder');
+
+        let logoOfPremierLeague = document.createElement('img');
+        logoOfPremierLeague.classList.add('logoOfPremierLeague');
+        logoOfPremierLeague.src = result.league.logo;
+        logoDivHolder.append(logoOfPremierLeague);
+
+        homeResult.append(nameOfTeam,countOfTeam);
+        awayResult.append(countOfTeamAway,awayHolder)
 
         resultOfMatch.append(homeResult,twoPoints, awayResult);
 
-        card.append(status,stadium,resultOfMatch);
+        card.append(status,stadium,resultOfMatch,roundDiv,logoDivHolder);
 }
 
 
@@ -1585,17 +1608,6 @@ sliderContainer.addEventListener("mousemove", (e) => {
 
 
 
-
-// fetch(`https://v3.football.api-sports.io/fixtures?league=39&season=2022`, {
-//     "method": "GET",
-//     "headers": {
-//         "x-rapidapi-host": "v3.football.api-sports.io",
-//         "x-rapidapi-key": key
-//     }
-//
-// })
-//     .then(response => response.json())
-//     .then(results => console.log(results))
 
 
 

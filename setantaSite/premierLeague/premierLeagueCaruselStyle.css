@@ -1,33 +1,28 @@
-.status, .stadium, .twoPoints, .homeResult, .awayResult{
+.status, .stadium, .twoPoints, .homeResult, .awayResult, .roundDiv{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .status{
     width: 100%;
-    height: 10%;
-    border: 1px solid;
+    height: 6%;
 }
 .stadium{
     width: 100%;
-    height: 10%;
-    border: 1px solid;
+    height: 6%;
 }
 .result{
     width: 100%;
     height: 15%;
-    border: 1px solid;
     display: flex;
 }
 .homeResult, .awayResult{
     width: 48%;
     height: 100%;
-    border: 1px solid;
 }
 .twoPoints{
     width: 4%;
     height: 100%;
-    border: 1px solid;
 }
 .logoOfTeam{
     width: 40px;
@@ -39,6 +34,10 @@
     justify-content: space-evenly;
     width: 90%;
     height: 100%;
+}
+.roundDiv{
+    width: 100%;
+    height: 8%;
 }
 
 
@@ -69,7 +68,7 @@
     width: 90%;
     height: 200px;
     position: absolute;
-    top: 100%;
+    top: 110%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
