@@ -1453,14 +1453,32 @@ let innerSlider = document.querySelector('.inner-slider');
 
 for (const result of pLeagueInfo) {
         console.log(result);
-        let card = document.createElement('div');
-card.classList.add('card');
-innerSlider.append(card)
-        let date = document.createElement('div');
-date.classList.add('date');
-date.innerHTML = `${result.fixture.date}`
-card.append(date)
 
+        let card = document.createElement('div');
+        card.classList.add('card');
+        innerSlider.append(card)
+
+        let status = document.createElement('div');
+        status.classList.add('status');
+        status.innerHTML = `${result.fixture.status.long}`;
+
+        let stadium = document.createElement('div');
+        stadium.classList.add('stadium');
+        stadium.innerHTML = `<b>Stadium:</b> ${result.fixture.venue.name}`;
+
+        let resultOfMatch = document.createElement('div');
+        resultOfMatch.classList.add('result');
+
+        let homeResult = document.createElement('div');
+        homeResult.classList.add('homeResult');
+
+        let awayResult = document.createElement('div');
+        awayResult.classList.add('awayResult');
+        resultOfMatch.append(homeResult,awayResult);
+
+
+
+        card.append(status,stadium,resultOfMatch);
 }
 
 
