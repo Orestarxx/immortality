@@ -10,9 +10,11 @@ body{
     justify-content: space-between;
 }
 #left{
-    width: 35%;
+    width: 40%;
     height: 100%;
-    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 #right{
     width: 30%;
@@ -20,6 +22,25 @@ body{
     border: 1px solid;
 }
 #microsoftLogo{
-    height: 65px;
-    width: 100px;
+    height: 55px;
+    width: 55px;
+}
+.menu:hover{
+    text-decoration: underline 2px;
+    padding: 2px;
+}
+#microsoftLogo:hover{
+    padding: 2px;
+}
+#red:hover{
+    color: #cb5555;
+}
+#green:hover{
+color: #4cc04c;
+}
+#blue:hover{
+    color: #5b5bef;
+}
+#yellow:hover{
+    color: #deba4c;
 }
