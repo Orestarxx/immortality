@@ -1,5 +1,7 @@
-body{
-    /*margin: 0;*/
+#father{
+    width: 100%;
+    height: 600px;
+
 }
 #header{
     width: 100%;
@@ -8,18 +10,20 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 #left{
     width: 40%;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 #right{
-    width: 30%;
+    width: 35%;
     height: 100%;
-    border: 1px solid;
+}
+#left, #right, #user, #searcher{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 #microsoftLogo{
     height: 55px;
@@ -27,10 +31,6 @@ body{
 }
 .menu:hover{
     text-decoration: underline 2px;
-    padding: 2px;
-}
-#microsoftLogo:hover{
-    padding: 2px;
 }
 #red:hover{
     color: #cb5555;
@@ -43,4 +43,40 @@ color: #4cc04c;
 }
 #yellow:hover{
     color: #deba4c;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#user{
+    width: 30%;
+    height: 100%;
+}
+#avatar{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 1px solid;
+}
+#inputHolder{
+    width: 90%;
+    height: 70px;
+    position: absolute;
+    top: 1%;
+    left: 7%;
+    background-color: white;
+    padding-top: 15px;
+    padding-left: 15%;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+#finder{
+    width: 70%;
+    height: 30px;
+    margin-right: 3px;
+}
+#cancel{
+    height: 30px;
+    width: 60px;
+    background-color: white;
 }

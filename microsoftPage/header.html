@@ -9,21 +9,29 @@
     <title>Document</title>
 </head>
 <body>
+<div id="father">
 <div id="header">
     <div id="left">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLTgoLuK1DQRfQpKqDmkp8qecUAehg7REpMc9_QXH-GTV1DfK-u0L2XJDfeHx6VGtdX9s&usqp=CAU" alt="microsoft" id="microsoftLogo">
-    <p class="menu" id="red">Microsoft 365</p>
-        <p class="menu" id="green">Teams</p>
-        <p class="menu" id="blue">Windows</p>
-        <p class="menu" id="yellow">Xbox</p>
-        <p class="menu" >Підтримка</p>
+        <a href="#"><p class="menu" id="red">Microsoft 365</p></a>
+        <a href="#"><p class="menu" id="green">Teams</p></a>
+        <a href="#"><p class="menu" id="blue">Windows</p></a>
+        <a href="#"><p class="menu" id="yellow">Xbox</p></a>
+        <a href="#"><p class="menu" >Підтримка</p></a>
     </div>
     <div id="right">
-        <div>Усі продукти Microsoft</div>
-        <div>Знайти</div>
-        <div>Кошик</div>
-        <div></div>
+        <div class="menu">Усі продукти  Microsoft</div>
+        <div class="menu" id="searcher">Знайти <img src="./logogs/free-icon-investigation-10165163.png" alt="search"></div>
+        <div class="menu">Кошик</div>
+        <div id="user">
+            Orest
+            <div id="avatar"></div>
+        </div>
     </div>
 </div>
+    <div id="inputHolder"><input type="text" name="search" id="finder"><button id="cancel">Cancel</button></div>
+
+</div>
+<script src="header.js"></script>
 </body>
 </html>
